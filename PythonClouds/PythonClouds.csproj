@@ -474,7 +474,9 @@
     <Content Include="Scripts\tinymce\tinymce.min.js" />
     <Content Include="Scripts\ui-tinymce.js" />
     <Content Include="Scripts\ui-tinymce.min.js" />
-    <Content Include="XMLDatabase\AzureMenu.xml" />
+    <Content Include="XMLDatabase\AzureMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="XMLDatabase\Home.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
