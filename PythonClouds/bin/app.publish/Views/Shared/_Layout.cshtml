@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title PythonClouds</title>
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    <script>
+        var WebPortalServer = '@ViewData["WebPortalServer"]';
+    </script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>*@
+</head>
+<body class="h-vh-100" style="background-image:url(@ViewData["bgimage"])">
+    <div ng-view></div>
+    <toast></toast>
+    @RenderBody()
+    <script data-main="AppJs/main.js" src="Scripts/require.js"></script>
+</body>
+</html>

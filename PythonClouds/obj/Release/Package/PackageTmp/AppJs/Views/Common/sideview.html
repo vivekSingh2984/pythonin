@@ -1,0 +1,55 @@
+﻿<div class="navbar sidebar" role="navigation">
+    <div class="sidebar-nav">
+        <ul class="nav" id="nice-menu">
+            <li class="sidebar-brand">
+                <span class="ttspan-fill">{{sideMenuTitle}}</span>
+            </li>
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control ttspan-fill" placeholder="Search...">
+                    <span class="input-group-btn ttspan-fill">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+        </ul>
+        <div class="div-side">
+            <script type="text/ng-template" id="treeMenu">
+                
+                
+            </script>
+            <ul class="nav nav-list">
+                <li ng-repeat="menu in SiteMenu | filter:{ParentId : 0}" class="level1">
+                    <a class="accordion-heading" href="#/{{menu.Section | lowercase}}/{{menu.Url}}" ng-hide="menu.Url == ''">{{menu.Name}}</a>
+                    <a class="accordion-heading" data-toggle="collapse" data-target="#menu{{menu.Id}}" ng-show="menu.Url == ''">
+                        <span class="nav-header-primary">{{menu.Name}}<span class="pull-right"><b class="caret"></b></span></span>
+                    </a>
+                    <ul ng-if="(SiteMenu | filter:{ParentId : menu.Id}).length > 0" class="nav nav-list collapse" id="menu{{menu.Id}}">
+                        <li ng-repeat="menu in SiteMenu | filter:{ParentId : menu.Id}" class="level2"><a href="#/{{menu.Section | lowercase}}/{{menu.Url}}" class="accordion-heading">{{menu.Name}}</a></li>
+                    </ul>
+                </li>
+                <li style="display:none"><a>Dashboard</a></li>
+                <li style="display:none">
+                    <a class="accordion-heading" data-toggle="collapse" data-target="#submenu1">
+                        <span class="nav-header-primary">Menu Link <span class="pull-right"><b class="caret"></b></span></span>
+                    </a>
+
+                    <ul class="nav nav-list collapse" id="submenu1">
+                        <li>
+                            <a class="accordion-heading" data-toggle="collapse" data-target="#submenu2">Sub Menu Link <span class="pull-right"><b class="caret"></b></span></a>
+                            <ul class="nav nav-list collapse" id="submenu2">
+                                <li><a href="#" title="Title">Sub Sub Menu Link</a></li>
+                                <li><a href="#" title="Title">Sub Sub Menu Link</a></li>
+                                <a class="accordion-heading" data-toggle="collapse" data-target="#submenu2">Sub Menu Link <span class="pull-right"><b class="caret"></b></span></a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

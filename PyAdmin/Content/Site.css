@@ -1,0 +1,50 @@
+﻿.navbar-inverse {
+    background-color: #0078d4;
+    border-color: #080808;
+}
+    .navbar-inverse .navbar-brand {
+        color: #ffffff;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+    }
+.controllers {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0078d4;
+}
+
+.tab_point_decr, .tab_point_decr img, .tab_point_decr div {
+    overflow: visible !important; /*change*/
+}
+
+.jqte_toolbar {
+    overflow: auto !important;
+    padding: 3px 4px;
+    background: #EEE;
+    border-bottom: #BBB 1px solid;
+    position: inherit;
+    overflow: visible !important; /*add*/
+    height: 35px; /*add*/
+}
+
+.jqte_fontsizes {
+    height: auto; /*change*/
+}
+
+.jqte_cpalette {
+    z-index: 20; /*add*/
+}
+.jqte_tool.jqte_tool_1 .jqte_tool_label {
+    position:relative;
+    display:block;
+    padding:3px;
+    width:70px;
+    height:21px; /*change*/
+    overflow:hidden;
+}
+.jqte_tool_label{
+    padding-top: 1px !important; /*add*/
+    height: 25px !important; /*add*/
+}

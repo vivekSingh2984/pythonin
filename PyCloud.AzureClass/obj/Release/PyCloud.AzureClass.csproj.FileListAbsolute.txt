@@ -1,0 +1,14 @@
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\PyCloud.AzureClass.dll
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\PyCloud.AzureClass.pdb
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Microsoft.WindowsAzure.Storage.dll
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Newtonsoft.Json.dll
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Microsoft.WindowsAzure.Storage.xml
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\bin\Release\Newtonsoft.Json.xml
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\obj\Release\PyCloud.AzureClass.csprojAssemblyReference.cache
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\obj\Release\PyCloud.AzureClass.csproj.CoreCompileInputs.cache
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\obj\Release\PyCloud.AzureClass.csproj.CopyComplete
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\obj\Release\PyCloud.AzureClass.dll
+C:\Users\AzureUser\RiderProjects\PythonClouds\PyCloud.AzureClass\obj\Release\PyCloud.AzureClass.pdb

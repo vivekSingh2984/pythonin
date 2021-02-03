@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <SideMenuTable>
+    <Id>1</Id>
+    <ParentId>0</ParentId>
+    <Name>Getting Start</Name>
+    <Section>Azure</Section>
+    <Url>getting-start</Url>
+  </SideMenuTable>
+  <SideMenuTable>
+    <Id>2</Id>
+    <ParentId>0</ParentId>
+    <Name>Azure Python Lib</Name>
+    <Section>Azure</Section>
+    <Url></Url>
+  </SideMenuTable>
+  <SideMenuTable>
+    <Id>3</Id>
+    <ParentId>2</ParentId>
+    <Name>Azure Common Func</Name>
+    <Section>Azure</Section>
+    <Url>azure-common-func</Url>
+  </SideMenuTable>
+</root>
