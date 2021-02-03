@@ -477,7 +477,7 @@
     <Content Include="XMLDatabase\AzureMenu.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="XMLDatabase\Home.xml">
+    <Content Include="XMLDatabase\HomeMenu.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EntityDeploy Include="ApplicationEntity\PyCloudDb.edmx">
