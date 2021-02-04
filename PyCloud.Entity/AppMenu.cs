@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PythonClouds.ApplicationEntity
+namespace PyCloud.Entity
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Content
+    public partial class AppMenu
     {
-        public int Id { get; set; }
-        public int SideBarId { get; set; }
-        public string Path { get; set; }
-        public string HeaderText { get; set; }
+        public int MenuId { get; set; }
+        public string MeneType { get; set; }
+        public int ParentMenuId { get; set; }
+        public string MenuText { get; set; }
+        public string MenuLink { get; set; }
+        public string MenuSection { get; set; }
     }
 }

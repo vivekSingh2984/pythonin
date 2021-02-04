@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PythonClouds.ApplicationEntity
+namespace PyCloud.Entity
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class pythonclouddbEntities : DbContext
+    public partial class pycloudinEntities : DbContext
     {
-        public pythonclouddbEntities()
-            : base("name=pythonclouddbEntities")
+        public pycloudinEntities()
+            : base("name=pycloudinEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace PythonClouds.ApplicationEntity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Content> Contents { get; set; }
+        public virtual DbSet<AppMenu> AppMenus { get; set; }
     }
 }

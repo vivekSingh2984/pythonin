@@ -26,6 +26,7 @@ define(['angularAMD'], function (angularAMD) {
             $scope.LoadMenu = function () {
                 HomeServices.GetSideMenu($rootScope.sideMenu)
                     .then(function (response) {
+                        console.log(response);
                         $scope.SiteMenu = response;
                         $window.localStorage.setItem($rootScope.sideMenu, JSON.stringify(response));
                     });

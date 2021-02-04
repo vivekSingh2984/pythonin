@@ -22,13 +22,13 @@
                 
             </script>
             <ul class="nav nav-list">
-                <li ng-repeat="menu in SiteMenu | filter:{ParentId : 0}" class="level1">
-                    <a class="accordion-heading" href="#/{{menu.Section | lowercase}}/{{menu.Url}}" ng-hide="menu.Url == ''">{{menu.Name}}</a>
-                    <a class="accordion-heading" data-toggle="collapse" data-target="#menu{{menu.Id}}" ng-show="menu.Url == ''">
-                        <span class="nav-header-primary">{{menu.Name}}<span class="pull-right"><b class="caret"></b></span></span>
+                <li ng-repeat="menu in SiteMenu | filter:{ParentMenuId : 0}" class="level1">
+                    <a class="accordion-heading" href="#/{{menu.MenuSection | lowercase}}/{{menu.MenuLink}}" ng-hide="menu.MenuLink == 'NA'">{{menu.MenuText}}</a>
+                    <a class="accordion-heading" data-toggle="collapse" data-target="#menu{{menu.MenuId}}" ng-show="menu.MenuLink == 'NA'">
+                        <span class="nav-header-primary">{{menu.MenuText}}<span class="pull-right"><b class="caret"></b></span></span>
                     </a>
-                    <ul ng-if="(SiteMenu | filter:{ParentId : menu.Id}).length > 0" class="nav nav-list collapse" id="menu{{menu.Id}}">
-                        <li ng-repeat="menu in SiteMenu | filter:{ParentId : menu.Id}" class="level2"><a href="#/{{menu.Section | lowercase}}/{{menu.Url}}" class="accordion-heading">{{menu.Name}}</a></li>
+                    <ul ng-if="(SiteMenu | filter:{ParentMenuId : menu.MenuId}).length > 0" class="nav nav-list collapse" id="menu{{menu.MenuId}}">
+                        <li ng-repeat="menu in SiteMenu | filter:{ParentMenuId : menu.MenuId}" class="level2"><a href="#/{{menu.MenuSection | lowercase}}/{{menu.MenuLink}}" class="accordion-heading">{{menu.MenuText}}</a></li>
                     </ul>
                 </li>
                 <li style="display:none"><a>Dashboard</a></li>

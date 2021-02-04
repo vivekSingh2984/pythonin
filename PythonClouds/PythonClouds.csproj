@@ -142,24 +142,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEntity\Content.cs">
-      <DependentUpon>PyCloudDb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ApplicationEntity\PyCloudDb.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PyCloudDb.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ApplicationEntity\PyCloudDb.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PyCloudDb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ApplicationEntity\PyCloudDb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PyCloudDb.edmx</DependentUpon>
-    </Compile>
     <Compile Include="ApplicationModel\GetTutorialContent.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -234,16 +216,6 @@
     <Content Include="AppJs\Views\SignUpIn\verifyemail.html" />
     <Content Include="AppJs\Views\User\accountsettings.html" />
     <Content Include="AppJs\Views\User\users.html" />
-    <Content Include="ApplicationEntity\PyCloudDb.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PyCloudDb.edmx</DependentUpon>
-      <LastGenOutput>PyCloudDb.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ApplicationEntity\PyCloudDb.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PyCloudDb.edmx</DependentUpon>
-      <LastGenOutput>PyCloudDb.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\blockui.min.css" />
     <Content Include="Content\awslogo.png" />
     <Content Include="Content\azurelogo.png" />
@@ -477,15 +449,8 @@
     <Content Include="XMLDatabase\AzureMenu.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="XMLDatabase\HomeMenu.xml">
+    <Content Include="XMLDatabase\Home.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="ApplicationEntity\PyCloudDb.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PyCloudDb.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ApplicationEntity\PyCloudDb.edmx.diagram">
-      <DependentUpon>PyCloudDb.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -1331,6 +1296,10 @@
     <ProjectReference Include="..\PyCloud.AzureClass\PyCloud.AzureClass.csproj">
       <Project>{aa5b15b9-6c23-47e7-b7b3-836f7034004a}</Project>
       <Name>PyCloud.AzureClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PyCloud.Model\PyCloud.Model.csproj">
+      <Project>{178ed173-2ee7-4511-bd32-0a988b845b1f}</Project>
+      <Name>PyCloud.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
