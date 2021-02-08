@@ -56,9 +56,11 @@ define(['angularAMD', 'angular-route', 'blockUI', 'ngToast', 'ngStorage', 'ngSan
                 templateUrl: 'AppJs/Views/Aws/aws.html', controller: 'AwsController',
                 data: { sidemenu: 'aws' }
             }))
-            .when("/python", angularAMD.route({
-                templateUrl: 'AppJs/Views/Python/python.html', controller: 'PythonController',
-                data: { sidemenu: 'python' }
+            .when('/python/', { redirectTo: '/python/getting-start' })
+            .when("/python/:topic", angularAMD.route({
+                templateUrl: 'AppJs/Views/python/python.html', controller: 'PythonController',
+                data: { sidemenu: 'python' },
+
             }))
             .when("/dashboard", angularAMD.route({
                 templateUrl: 'AppJs/Views/Dashboard/dashboard.html', controller: 'DashboardController'//, requiresAuthentication: true,

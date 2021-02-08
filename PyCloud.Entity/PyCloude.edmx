@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="pycloudinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppBlog">
+          <Key>
+            <PropertyRef Name="BlogId" />
+          </Key>
+          <Property Name="BlogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuId" Type="int" Nullable="false" />
+          <Property Name="IsPublish" Type="bit" Nullable="false" />
+          <Property Name="BlogTitle" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="AppMenu">
           <Key>
             <PropertyRef Name="MenuId" />
@@ -17,6 +26,7 @@
           <Property Name="MenuSection" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="pycloudinModelStoreContainer">
+          <EntitySet Name="AppBlog" EntityType="Self.AppBlog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AppMenu" EntityType="Self.AppMenu" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -25,6 +35,7 @@
       <Schema Namespace="pycloudinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="pycloudinEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AppMenus" EntityType="pycloudinModel.AppMenu" />
+          <EntitySet Name="AppBlogs" EntityType="pycloudinModel.AppBlog" />
         </EntityContainer>
         <EntityType Name="AppMenu">
           <Key>
@@ -36,6 +47,15 @@
           <Property Name="MenuText" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MenuLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MenuSection" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AppBlog">
+          <Key>
+            <PropertyRef Name="BlogId" />
+          </Key>
+          <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuId" Type="Int32" Nullable="false" />
+          <Property Name="IsPublish" Type="Boolean" Nullable="false" />
+          <Property Name="BlogTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -52,6 +72,16 @@
                 <ScalarProperty Name="ParentMenuId" ColumnName="ParentMenuId" />
                 <ScalarProperty Name="MeneType" ColumnName="MeneType" />
                 <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppBlogs">
+            <EntityTypeMapping TypeName="pycloudinModel.AppBlog">
+              <MappingFragment StoreEntitySet="AppBlog">
+                <ScalarProperty Name="BlogTitle" ColumnName="BlogTitle" />
+                <ScalarProperty Name="IsPublish" ColumnName="IsPublish" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

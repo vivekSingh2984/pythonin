@@ -6,6 +6,7 @@
         Feature.GetSideMenu = GetSideMenu;
         Feature.GetHomeContent = GetHomeContent;
         Feature.GetAzureContent = GetAzureContent;
+        Feature.GetTopMenu = GetTopMenu;
         return Feature;
         function ImageCountHome() {
             var deferred = $q.defer();
@@ -43,6 +44,22 @@
             var deferred = $q.defer();
             $http({
                 url: APIURL + 'api/Common/GetHomeContent',
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                datatype: 'json'
+
+            }).then(function (response) {
+                deferred.resolve(response.data);
+            }, function () {
+                deferred.reject();
+            });
+            return deferred.promise;
+        }
+
+        function GetTopMenu() {
+            var deferred = $q.defer();
+            $http({
+                url: APIURL + 'api/Common/GetTopMenu',
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json; charset=utf-8' },
                 datatype: 'json'

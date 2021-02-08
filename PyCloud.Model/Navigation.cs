@@ -41,7 +41,6 @@ namespace PyCloud.Model
                         where _content.MeneType == "Top"
                         select new Navigation
                         {
-                            MenuId = _content.MenuId,
                             MenuLink = _content.MenuLink,
                             MenuText = _content.MenuText,
                         }).ToList();

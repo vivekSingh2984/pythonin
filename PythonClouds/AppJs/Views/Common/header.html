@@ -10,11 +10,7 @@
             <a class="navbar-brand" href="#"><img alt="" src="/Content/logo.svg" width="35px" style="display: inline-block"/>PythonCloud</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/#/azure">Azure</a></li>
-            <li><a href="#">AWS</a></li>
-            <li><a href="#">GCP</a></li>
-            <li><a href="/#/python">Python</a></li>
-            <li><a href="/#/admindashboard">admindashboard</a></li>
+            <li ng-repeat="menu in SiteTopMenu"><a href="/#/{{menu.MenuSection}}">{{menu.MenuText}}</a></li>
         </ul>
     </div>
 </nav>

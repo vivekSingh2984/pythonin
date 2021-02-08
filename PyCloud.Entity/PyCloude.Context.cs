@@ -26,5 +26,6 @@ namespace PyCloud.Entity
         }
     
         public virtual DbSet<AppMenu> AppMenus { get; set; }
+        public virtual DbSet<AppBlog> AppBlogs { get; set; }
     }
 }

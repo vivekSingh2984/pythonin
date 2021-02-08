@@ -101,6 +101,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppBlog.cs">
+      <DependentUpon>PyCloude.tt</DependentUpon>
+    </Compile>
     <Compile Include="AppMenu.cs">
       <DependentUpon>PyCloude.tt</DependentUpon>
     </Compile>

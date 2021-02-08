@@ -51,10 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetTutorialContent.cs" />
     <Compile Include="Navigation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PyCloud.AzureClass\PyCloud.AzureClass.csproj">
+      <Project>{aa5b15b9-6c23-47e7-b7b3-836f7034004a}</Project>
+      <Name>PyCloud.AzureClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PyCloud.Entity\PyCloud.Entity.csproj">
       <Project>{b935ece0-7685-4e39-a1ed-f32e29e7d556}</Project>
       <Name>PyCloud.Entity</Name>
