@@ -18,7 +18,7 @@ define(['angularAMD'], function (angularAMD) {
         };
     }
 
-    function uiSideViewController($scope, $rootScope, $location, $http, $route, $window, blockUI, $localStorage, AuthServices, HomeServices) {
+    function uiSideViewController($scope, $rootScope, $location, $http, $route, $window, blockUI, AuthServices, HomeServices) {
         $scope.sideMenuTitle = 'Navigation'
         if ($rootScope.sideMenu != undefined) {
             console.log($rootScope.sideMenu)
@@ -28,12 +28,12 @@ define(['angularAMD'], function (angularAMD) {
                     .then(function (response) {
                         console.log(response);
                         $scope.SiteMenu = response;
-                        $window.localStorage.setItem($rootScope.sideMenu, JSON.stringify(response));
+                        $window.sessionStorage.setItem($rootScope.sideMenu, JSON.stringify(response));
                     });
             }
-            if ($window.localStorage.getItem($rootScope.sideMenu) != undefined) {
+            if ($window.sessionStorage.getItem($rootScope.sideMenu) != undefined) {
                 
-                $scope.SiteMenu = JSON.parse($window.localStorage.getItem($rootScope.sideMenu));
+                $scope.SiteMenu = JSON.parse($window.sessionStorage.getItem($rootScope.sideMenu));
             }
             else {
                 $scope.LoadMenu();
