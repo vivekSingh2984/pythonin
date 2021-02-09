@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using PyCloud.Model;
 
 namespace PyAdmin
 {
@@ -17,9 +17,7 @@ namespace PyAdmin
         {
             if (!Page.IsPostBack)
             {
-                var result = GetContent();
-                TextBox1.Text = result.ContentText;
-                titleTxt.Text = result.HeaderText;
+                this.BindAreaDropDown();
             }
         }
 
@@ -27,32 +25,41 @@ namespace PyAdmin
         {
             SetContent();
         }
-        public class TopicContent
+        private void BindAreaDropDown()
         {
-            public string HeaderText { get; set; }
-
-            public string ContentText { get; set; }
+            var result = new GetTutorialContent().GetArea();
+            AreaDropDown.DataSource = result;
+            AreaDropDown.DataBind();
         }
-        private TopicContent GetContent()
+        private void BindBlogDropDown(string section)
         {
-            TopicContent topicContent = new TopicContent();
-            this.ShareName = this.shareNameDDL.SelectedValue;
-            FileStorage fileStorage = new FileStorage(AppSetting.StorageConnectionString, this.ShareName.ToLower());
-            var folderpath = "gettingstart";
-            var filename = "gettingstart.html";
-            var content = fileStorage.ReadFile(folderpath, filename);
-            topicContent.ContentText = content;
-            topicContent.HeaderText = "Getting Start";
-            return topicContent;
+            var result = new GetTutorialContent().GetBlog(section);
+            BlogDropDown.Items.AddRange(result.ToArray());
+        }
+        private void GetContent()
+        {
+            var result = new GetTutorialContent().GetContent(this.BlogDropDown.SelectedValue);           
+            TextBox1.Text = result.ContentText;
+            titleTxt.Text = result.HeaderText;
         }
 
         private void SetContent()
         {
-            this.ShareName = this.shareNameDDL.SelectedValue;
-            FileStorage fileStorage = new FileStorage(AppSetting.StorageConnectionString, this.ShareName.ToLower());
-            var folderpath = "gettingstart";
-            var filename = "gettingstart.html";
-            fileStorage.UpdateFile(folderpath, filename, TextBox1.Text);
+            //this.ShareName = this.shareNameDDL.SelectedValue;
+            //FileStorage fileStorage = new FileStorage(AppSetting.StorageConnectionString, this.ShareName.ToLower());
+            //var folderpath = "gettingstart";
+            //var filename = "gettingstart.html";
+            //fileStorage.UpdateFile(folderpath, filename, TextBox1.Text);
+        }
+
+        protected void AreaDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.BindBlogDropDown(this.AreaDropDown.SelectedValue);
+        }
+
+        protected void BlogDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.GetContent();
         }
     }
 }

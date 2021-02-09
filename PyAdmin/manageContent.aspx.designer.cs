@@ -15,22 +15,22 @@ namespace PyAdmin
     {
 
         /// <summary>
-        /// shareNameDDL control.
+        /// AreaDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList shareNameDDL;
+        protected global::System.Web.UI.WebControls.DropDownList AreaDropDown;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// BlogDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList BlogDropDown;
 
         /// <summary>
         /// CheckBox1 control.

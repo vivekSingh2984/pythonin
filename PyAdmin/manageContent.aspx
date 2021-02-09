@@ -9,15 +9,9 @@
         </div>
         <div class="col-10">
             <div class="form-group">
-                <asp:DropDownList ID="shareNameDDL" runat="server" CssClass="form-control">
-                    <asp:ListItem Value="">Select Area</asp:ListItem>
-                    <asp:ListItem Value="Azure" Selected="True">Azure</asp:ListItem>
-                    <asp:ListItem Value="AWS">AWS</asp:ListItem>
+                <asp:DropDownList ID="AreaDropDown" runat="server" CssClass="form-control" OnSelectedIndexChanged="AreaDropDown_SelectedIndexChanged" AutoPostBack="True">
                 </asp:DropDownList>
-                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
-                    <asp:ListItem Value="">Select Blog</asp:ListItem>
-                    <asp:ListItem Value="Azure">Azure</asp:ListItem>
-                    <asp:ListItem Value="AWS">AWS</asp:ListItem>
+                <asp:DropDownList ID="BlogDropDown" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="BlogDropDown_SelectedIndexChanged">
                 </asp:DropDownList>
                 <asp:CheckBox ID="CheckBox1" runat="server" CssClass="form-control" Text="Published" />
                 <asp:LinkButton ID="previewBlog" runat="server" CssClass="form-control">Preview</asp:LinkButton>
@@ -29,7 +23,7 @@
         </div>
         <div class="col-10">
             <div class="form-group">
-                <asp:TextBox ID="titleTxt" runat="server" CssClass="form-control" placeholder="Title" ></asp:TextBox>
+                <asp:TextBox ID="titleTxt" runat="server" CssClass="form-control" placeholder="Title"></asp:TextBox>
                 Title:
             </div>
         </div>
