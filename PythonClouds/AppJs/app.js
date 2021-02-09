@@ -56,7 +56,7 @@ define(['angularAMD', 'angular-route', 'blockUI', 'ngToast', 'ngStorage', 'ngSan
                 templateUrl: 'AppJs/Views/Aws/aws.html', controller: 'AwsController',
                 data: { sidemenu: 'aws' }
             }))
-            .when('/python/', { redirectTo: '/python/getting-start' })
+            .when('/python/', { redirectTo: '/python/python-getting-start' })
             .when("/python/:topic", angularAMD.route({
                 templateUrl: 'AppJs/Views/python/python.html', controller: 'PythonController',
                 data: { sidemenu: 'python' },
