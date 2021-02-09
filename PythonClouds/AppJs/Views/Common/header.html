@@ -7,10 +7,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img alt="" src="/Content/logo.svg" width="35px" style="display: inline-block"/>PythonCloud</a>
+            <a class="navbar-brand" href="#"><img alt="" src="/Content/logo.png" width="35" style="display: inline-block;margin-top: -5px;"/>PythonCloud</a>
         </div>
         <ul class="nav navbar-nav">
-            <li ng-repeat="menu in SiteTopMenu"><a href="/#/{{menu.MenuSection}}">{{menu.MenuText}}</a></li>
+            <li ng-repeat="menu in SiteTopMenu"><a href="/#/{{menu.MenuText|lowercase}}">{{menu.MenuText}}</a></li>
         </ul>
     </div>
 </nav>
